@@ -14,16 +14,16 @@ Una vez que se limpió la base de datos, se calculó su tamaño, resultando en 2
 ## Atributos Relevantes
 A continuación, se describen los 21 atributos para una representación precisa de los datos:
 
-Fecha: Fecha real cuando se obtuvieron los datos, abarcando semanas desde la semana 1 a la semana 52 del 2022 y de la semana 1 a la semana 4 del 2023.
-Demanda: Demanda real compartida por el cliente por semana en la fecha correspondiente.
-Venta: Venta real por semana en la fecha correspondiente.
-Moldeo: Cantidad de piezas producidas por semana en la fecha correspondiente (primer proceso de producción).
-Visual: Cantidad de piezas inspeccionadas por semana en la fecha correspondiente (segundo proceso de producción).
-WIP: Inventario de piezas listas para maquinar por semana (proceso final).
-PT: Inventario de productos terminados por semana listos para ser enviados al cliente.
-Capacidad: Capacidad máxima de producción de piezas (Moldeo) por semana, basada en el número de máquinas asignadas al producto.
-Pronósticos: Los pronósticos del 1 al 12 se refieren al pronóstico de demanda compartido por el cliente con 12 semanas de anticipación a la fecha correspondiente.
-Promedio_Pronóstico: Es el promedio de los 12 pronósticos por semana.
+- Fecha: Fecha real cuando se obtuvieron los datos, abarcando semanas desde la semana 1 a la semana 52 del 2022 y de la semana 1 a la semana 4 del 2023.
+- Demanda: Demanda real compartida por el cliente por semana en la fecha correspondiente.
+- Venta: Venta real por semana en la fecha correspondiente.
+- Moldeo: Cantidad de piezas producidas por semana en la fecha correspondiente (primer proceso de producción).
+- Visual: Cantidad de piezas inspeccionadas por semana en la fecha correspondiente (segundo proceso de producción).
+- WIP: Inventario de piezas listas para maquinar por semana (proceso final).
+- PT: Inventario de productos terminados por semana listos para ser enviados al cliente.
+- Capacidad: Capacidad máxima de producción de piezas (Moldeo) por semana, basada en el número de máquinas asignadas al producto.
+- Pronósticos: Los pronósticos del 1 al 12 se refieren al pronóstico de demanda compartido por el cliente con 12 semanas de anticipación a la fecha correspondiente.
+- Promedio_Pronóstico: Es el promedio de los 12 pronósticos por semana.
 
 ## Análisis de Datos
 Para una visualización más organizada de la demanda real, se representaron los datos en un histograma. Los resultados indican que la demanda real oscila entre 20,000 y 26,000 piezas por semana.
@@ -33,9 +33,9 @@ Para una visualización más organizada de la demanda real, se representaron los
 ## Modelado y Predicción
 El proyecto utiliza el algoritmo de regresión lineal para predecir la demanda de los próximos 7 días, permitiendo al equipo de planificación asignar recursos de manera temprana para satisfacer las necesidades del cliente. Los datos se dividieron en dos conjuntos: entrenamiento y prueba.
 
-Variables de entrenamiento: (Promedio_Pronóstico, Ventas, Inventario, Pronóstico_1, Pronóstico_2, Pronóstico_3, WIP, Visual)
-Variable de prueba: (Demanda_real)
-Los resultados muestran que, a medida que aumentan las variables (Ventas, Pronóstico_1, Pronóstico_2 y Visual), la demanda real también aumenta. Por otro lado, a medida que aumentan las variables (Promedio_Pronóstico, Inventario, Pronóstico_3 y WIP), la demanda real disminuye.
+- Variables de entrenamiento: (Promedio_Pronóstico, Ventas, Inventario, Pronóstico_1, Pronóstico_2, Pronóstico_3, WIP, Visual)
+- Variable de prueba: (Demanda_real)
+- Los resultados muestran que, a medida que aumentan las variables (Ventas, Pronóstico_1, Pronóstico_2 y Visual), la demanda real también aumenta. Por otro lado, a medida que aumentan las variables (Promedio_Pronóstico, Inventario, Pronóstico_3 y WIP), la demanda real disminuye.
 
 ![image](https://github.com/jolosjoel/Maching-learning-Linear-Regresion/assets/45809759/97e74aa8-7aff-4019-9f1a-0e52616a9f8e)
 
